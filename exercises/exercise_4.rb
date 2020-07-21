@@ -19,6 +19,6 @@ puts "----------"
  puts
 }
 
-@womens_stores = Store.where(womens_apparel: true, :annual_revenue => [0...1000000])
+@womens_stores = Store.where(womens_apparel: true).where('annual_revenue < 1000000') 
 
 pp @womens_stores 
